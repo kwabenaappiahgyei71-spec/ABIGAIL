@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dear Abigail 💕</title>
+
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b0a3d, #5c0f3a, #9e2a5f);
+  font-family: 'Segoe UI', sans-serif;
+  overflow-y: auto; /* ENABLE SCROLL */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Center wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 28px 26px;
+  max-width: 560px;
+  width: 100%;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.35);
+  animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+  color: #9e2a5f;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+p {
+  color: #555;
+  font-size: 16.5px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.highlight {
+  color: #9e2a5f;
+  font-weight: 600;
+}
+
+.signature {
+  margin-top: 18px;
+  font-weight: bold;
+  color: #9e2a5f;
+}
+
+/* Floating kisses & hearts */
+.float {
+  position: fixed;
+  bottom: -40px;
+  font-size: 22px;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="card">
+    <h1>Dear Abigail 💕</h1>
+
+    <p>
+      Sometimes life doesn’t go exactly how we imagine,  
+      and that’s completely fine.
+    </p>
+
+    <p>
+      But I won’t lie — I really enjoy your presence.  
+      Your vibe is pure good energy,  
+      talking to you is always fun,  
+      and your daily streaks honestly make my days better 😄
+    </p>
+
+    <p>
+      So instead of overthinking anything,  
+      here’s me asking from a good place:
+    </p>
+
+    <p>
+      <span class="highlight">Will you be my bestie?</span> 💕  
+      Like… my female bestie.  
+      And will you allow me to be your male bestie too? 😌
+    </p>
+
+    <p>
+      No pressure, no mixed signals —  
+      just vibes, laughs, respect,  
+      and good energy moving forward 🤍
+    </p>
+
+    <p>
+      And if someday the future decides to upgrade that title,  
+      we’ll let it happen naturally ✨
+    </p>
+
+    <div class="signature">
+      — From Kobby 💖
+    </div>
+  </div>
+</div>
+
+<script>
+const emojis = ["💋", "💖", "💕", "💗", "✨"];
+
+function createFloat() {
+  const el = document.createElement("div");
+  el.className = "float";
+  el.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+  el.style.left = Math.random() * 100 + "vw";
+  el.style.fontSize = (18 + Math.random() * 20) + "px";
+  el.style.animationDuration = (6 + Math.random() * 4) + "s";
+  document.body.appendChild(el);
+
+  setTimeout(() => el.remove(), 9000);
+}
+
+setInterval(createFloat, 500);
+</script>
+
+</body>
+</html>
